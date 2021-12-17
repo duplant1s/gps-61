@@ -1,1 +1,15 @@
-lol
+stages:
+  - analyse
+  - test
+  
+ana:
+  stage: analyse
+  script:
+    - pylint transform.py
+    - pylint main.py
+
+tests:
+  stage: test
+  script:
+    - echo "Run the tests:"
+    - python test.py

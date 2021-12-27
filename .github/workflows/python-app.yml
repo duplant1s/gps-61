@@ -34,6 +34,4 @@ jobs:
         
     - name: Test
       run: |
-        pytest test.py
-        coverage run pytest
-        coverage report
+        pytest -cov --cov-branch --cov-report test.py

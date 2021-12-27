@@ -35,3 +35,7 @@ jobs:
     - name: Test
       run: |
         python test.py
+    - name: coverage
+      run: |
+        coverage run pytest
+        coverage report

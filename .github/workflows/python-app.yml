@@ -27,9 +27,7 @@ jobs:
     - name: Lint with flake8
       run: |
         conda install flake8
-        # la build es para si hi ha cap problema
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero tractara tots el errors com avisos, lenght=127 es el tamany que te l'editor
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
     - name: Test

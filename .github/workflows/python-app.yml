@@ -32,5 +32,5 @@ jobs:
         
     - name: Test
       run: |
-        coverage run -m pytest test.py
+        pytest --cov=gps61 .
         coverage report

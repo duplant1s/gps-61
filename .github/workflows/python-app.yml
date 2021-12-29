@@ -32,5 +32,6 @@ jobs:
         
     - name: Test
       run: |
+        find . -name "*.pyc" -exec rm -rf {} \;
         coverage run -m pytest test.py
         coverage report

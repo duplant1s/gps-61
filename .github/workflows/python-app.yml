@@ -34,5 +34,6 @@ jobs:
         
     - name: Test
       run: |
-        coverage run -m pytest test.py --cover-erase
+        find . -name "*.pyc" -exec rm -rf {} \;
+        coverage run -m pytest test.py
         coverage report

@@ -32,5 +32,5 @@ jobs:
         
     - name: Test
       run: |
-        pytest --cov=.
+        pytest --cov=test
         coverage report
